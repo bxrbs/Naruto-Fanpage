@@ -1,0 +1,357 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    background-color: #f6e27f;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: #f7c59f; 
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero-img img {
+    width: 150px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin: 10px 0;
+    }
+
+    .hero-img img {
+        width: 120px;
+    }
+}
+/* PERSONAJES */
+.personajes {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #c7ecff;
+    padding: 15px;
+    border-radius: 12px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 15px;
+    background-color: #b8e0ff;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* ALDEAS */
+.aldeas {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grid-aldeas {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 12px;
+}
+
+.grid-aldeas button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.grid-aldeas button:hover {
+    background-color: #555;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #f6e27f;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.redes a {
+    margin: 0 10px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    text-decoration: underline;
+}
+
+.sinopsis {
+    padding: 60px 20px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.sinopsis h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ff7b00;  
+    font-weight: 700;
+}
+
+.sinopsis p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+:root{
+  --gap: 14px;
+  --card-size: 84px;
+  --accent: #ffb86b;
+  --text: #222;
+  --muted: #666;
+  --bg: #fff;
+  --panel-bg: #f7f6f4;
+  --radius: 12px;
+}
+
+.aldeas-section{
+  padding: 28px 18px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* wrapper: grid (grid + aside) */
+.aldeas-wrap{
+  display: flex;
+  flex-direction: column; 
+  gap: 18px;
+  align-items: stretch;
+}
+
+.aldeas-section input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* GRID de aldeas */
+.aldeas-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: var(--gap);
+  justify-items: center;
+  align-items: center;
+}
+
+/* cada tarjeta (label) */
+.aldea-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: var(--card-size);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+/* imagen dentro de la tarjeta */
+.aldea-card img{
+  width: var(--card-size);
+  height: var(--card-size);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  background: white;
+  transition: transform .18s ease;
+}
+
+/* nombre debajo */
+.aldea-card span{
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.aldea-card:hover,
+.aldea-card:focus{
+  transform: translateY(-6px);
+}
+.aldea-card:active{
+  transform: translateY(-2px);
+}
+
+/* PANEL de info */
+.info{
+  background: var(--panel-bg);
+  padding: 18px;
+  border-radius: var(--radius);
+  min-height: 120px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.info .aldea-info{
+  display: none;
+}
+
+#v-hoja:checked ~ .aldeas-wrap .info .v-hoja,
+#v-niebla:checked ~ .aldeas-wrap .info .v-niebla,
+#v-arena:checked ~ .aldeas-wrap .info .v-arena,
+#v-nubes:checked ~ .aldeas-wrap .info .v-nubes,
+#v-lluvia:checked ~ .aldeas-wrap .info .v-lluvia,
+#v-roca:checked ~ .aldeas-wrap .info .v-roca,
+#v-hierba:checked ~ .aldeas-wrap .info .v-hierba,
+#v-cascada:checked ~ .aldeas-wrap .info .v-cascada,
+#v-sonido:checked ~ .aldeas-wrap .info .v-sonido,
+#v-nieve:checked ~ .aldeas-wrap .info .v-nieve,
+#v-estrella:checked ~ .aldeas-wrap .info .v-estrella,
+#v-remolino:checked ~ .aldeas-wrap .info .v-remolino,
+#v-luna:checked ~ .aldeas-wrap .info .v-luna,
+#v-nadeshiko:checked ~ .aldeas-wrap .info .v-nadeshiko,
+#v-humo:checked ~ .aldeas-wrap .info .v-humo,
+#v-sueño:checked ~ .aldeas-wrap .info .v-sueño {
+  display: block;
+  animation: fadeIn .18s ease;
+}
+
+/* estilo dentro de cada info */
+.aldea-info h3{
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.aldea-info p{
+  margin: 0 0 8px 0;
+  color: #333;
+  line-height: 1.4;
+}
+.aldea-info ul{
+  margin: 6px 0 0 18px;
+  color: var(--muted);
+}
+
+/* animación pequeña */
+@keyframes fadeIn{
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media(min-width: 880px){
+  .aldeas-wrap{
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+
+  .aldeas-grid{
+    grid-template-columns: repeat(4, 1fr); 
+    width: 60%;
+    max-width: 920px;
+  }
+
+  .info{
+    width: 40%;
+    min-height: 280px;
+  }
+
+  .aldea-card{
+    max-width: 100px;
+  }
+
+  .aldea-card img{
+    width: 92px;
+    height: 92px;
+  }
+}
+
+/* accesibilidad: foco en labels */
+.aldea-card:focus-within,
+.aldea-card:focus{
+  outline: 3px solid rgba(255,184,107,0.18);
+  border-radius: 10px;
+}
