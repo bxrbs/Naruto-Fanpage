@@ -102,6 +102,11 @@ body {
     text-align: center;
 }
 
+button {
+    padding: 5px;
+    cursor: pointer;
+}
+
 .cards {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -252,7 +257,8 @@ body {
 
 /* PANEL de info */
 .info{
-    background: var(--panel-bg);
+    display: flex;
+    align-items: center;
     padding: 18px;
     border-radius: var(--radius);
     min-height: 120px;
@@ -311,8 +317,7 @@ body {
     }
 
     .aldeas-wrap{
-        flex-direction: row; 
-        align-items: flex-start;
+        flex-direction: row;
     }
 
     .aldeas-grid{

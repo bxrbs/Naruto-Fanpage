@@ -24,7 +24,7 @@ function playSound(character) {
         currentAudio.currentTime = 0;
     }
 
-    currentAudio = new Audio(`./img/naruto.m4a`);
+    currentAudio = new Audio(`./audio/${character}.mp3`);
     currentAudio.play().catch((error) => {
         console.error("Error al reproducir el audio:", error);
     });
