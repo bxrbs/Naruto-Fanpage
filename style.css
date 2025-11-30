@@ -15,6 +15,7 @@ body {
 .header {
     padding: 25px 25px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -73,6 +74,10 @@ body {
     font-weight: bold;
 }
 
+.nav {
+    text-align: center;
+}
+
 .nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -88,7 +93,6 @@ body {
 
 
 .nav a:hover {
-    text-decoration: underline;
     color: white;
 }
 
@@ -129,6 +133,7 @@ body {
 
 .card:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .boton {
@@ -181,7 +186,9 @@ body {
 
 .aldeas-wrap{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden; 
     gap: 18px;
     align-items: stretch;
 }
@@ -201,7 +208,7 @@ body {
     align-items: center;
 }
 
-/* cada label */
+/* card label */
 .aldea-card{
     display: flex;
     flex-direction: column;
@@ -219,8 +226,8 @@ body {
 
 /* imagen dentro de la tarjeta */
 .aldea-card img{
-    width: var(--card-size);
-    height: var(--card-size);
+    width: 30%;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
@@ -299,6 +306,10 @@ body {
 }
 
 @media(min-width: 880px){
+    .header {
+        flex-direction: row;
+    }
+
     .aldeas-wrap{
         flex-direction: row; 
         align-items: flex-start;
