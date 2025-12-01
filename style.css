@@ -116,7 +116,7 @@ button {
 }
 
 .btn-audio{
-    background: rgb(255, 115, 0);
+    background: rgb(194, 87, 0);
     color: white;
     border: none;
     padding: 12px 18px;
@@ -126,7 +126,7 @@ button {
 }
 
 .btn-audio:hover{
-    box-shadow: 0 0 10px rgba(255, 115, 0, 0.8);
+    box-shadow: 0 0 10px rgb(255, 183, 116);
 }
 
 .cards {
@@ -362,11 +362,16 @@ button {
 @media screen and (max-width: 760px){
     
     .header{
-        padding: 20px 20px;
+        padding: 30px 50px;
     }
 
     .header.scrolled{
-        padding: 10px 18px;
+        padding: 20px 20px;
+    }
+
+    .hero{
+        max-height: 450px;
+        padding-bottom: 30px;
     }
 
     .hero img{
