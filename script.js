@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function toggleMenu() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("active");
+}
 
 // AUDIOS CARDS
 let currentAudio = null;

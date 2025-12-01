@@ -6,24 +6,28 @@
         <title>NarutoWiki</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="./img/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
     <body>
     
         <header class="header">
             <h1 class="logo">Naruto Wiki</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <nav class="nav">
                 <a href="#inicio">Inicio</a>
                 <a href="#personajes">Personajes</a>
-                <a href="#arcos">Arcos</a>
-                <a href="#curiosidades">Curiosidades</a>
-                <a href="#galeria">Galería</a>
+                <a href="#aldeas">Aldeas</a>
+                <a href="#sinopsis">Sinopsis</a>
+                <a href="#redes">Síguenos</a>
             </nav>
         </header>
         <section id="inicio" class="hero">
             <img src="img/Naruto_logo.png" alt="Naruto-Logo">
             <div class="hero-text">
-                <h1>Conoce más sobre el anime y sus personajes</h1>
+                <h1>Conoce más sobre el anime y sus personajes</h1><br>
                 <p>Explora la historia, aldeas y personajes icónicos del mundo ninja.</p>
             </div>
         </section><br>
@@ -33,41 +37,42 @@
 
             <div class="cards">
                 <div class="card">
-                    <img src="img/naruto.jpg" alt="Naruto">
+                    <div class="card-img"><img src="img/naruto.jpg" alt="Naruto"></div>
                     <h3>Naruto</h3>
-                    <button onclick="playSound('naruto')">Naruto - Soy el mas perron!</button>
+                    <button class="btn-audio" onclick="playSound('naruto')"><i class="fa-solid fa-volume-high" style="color: rgb(255, 255, 255);"></i> Soy el Más Perrón!</button>
                 </div>
 
                 <div class="card">
-                    <img src="img/kakashi.jpg" alt="Kakashi">
-                    <h3>Kakashi</h3>
-                    <button onclick="playSound('kakashi')">Kakashi - Aquellos que Abandonan!</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/itachi.jpg" alt="itachi">
-                    <h3>Itachi</h3>
-                    <button onclick="playSound('itachi')">Itachi - Te falta Odio!</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/sasuke.jpg" alt="Sasuke">
+                    <div class="card-img"><img src="img/sasuke.jpg" alt="Sasuke"></div>
                     <h3>Sasuke</h3>
-                    <button onclick="playSound('sasuke')">Sasuke - Mi Nombre es Sasuke!</button>
+                    <button class="btn-audio" onclick="playSound('sasuke')"><i class="fa-solid fa-volume-high" style="color: rgb(255, 255, 255);"></i> Mi Nombre es Sasuke!</button>
                 </div>
 
                 <div class="card">
-                    <img src="img/sakura.jpg" alt="Sakura">
+                    <div class="card-img"><img src="img/sakura.jpg" alt="Sakura"></div>
                     <h3>Sakura</h3>
-                    <button onclick="playSound('sakura')">Sakura - Mirarian mi Espalda!</button>
+                    <button class="btn-audio" onclick="playSound('sakura')"><i class="fa-solid fa-volume-high" style="color: rgb(255, 255, 255);"></i> Mi Capacidad Máxima!</button>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img"><img src="img/kakashi.jpg" alt="Kakashi"></div>
+                    <h3>Kakashi</h3>
+                    <button class="btn-audio" onclick="playSound('kakashi')"><i class="fa-solid fa-volume-high" style="color: rgb(255, 255, 255);"></i> Aquellos que Abandonan!</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="img/itachi.jpg" alt="itachi"></div>
+                    <h3>Itachi</h3>
+                    <button class="btn-audio" onclick="playSound('itachi')"><i class="fa-solid fa-volume-high" style="color: rgb(255, 255, 255);"></i> Te Falta Odio!</button>
                 </div>
             </div>
 
-            <a class="boton" href="#mas-personajes">Más personajes</a>
         </section>
 
         <!-- ALDEAS -->
         <section id="aldeas" class="aldeas-section">
+            <h2>Conoce sobre las aldeas:</h2><br><br>
+
             <input type="radio" name="aldea" id="v-hoja" checked>
             <input type="radio" name="aldea" id="v-niebla">
             <input type="radio" name="aldea" id="v-arena">
@@ -172,115 +177,116 @@
 
                 <aside class="info" aria-live="polite">
                     <div class="aldea-info v-hoja">
-                    <h3>Aldea de la Hoja</h3>
-                    <p>Centro principal de la historia clásica; hogar de Naruto y del Equipo 7. Famosa por su academia ninja y por su voluntad del fuego.</p>
-                    <ul>
-                        <li>Personajes clave: Naruto, Sasuke, Sakura, Kakashi.</li>
-                        <li>Armas/elementos: técnicas de viento y fuego.</li>
-                    </ul>
+                        <h3>Aldea de la Hoja</h3>
+                        <p>Centro principal de la historia clásica; hogar de Naruto y del Equipo 7. Famosa por su academia ninja y por su voluntad del fuego.</p>
+                        <ul>
+                            <li>Personajes clave: Naruto, Sasuke, Sakura, Kakashi.</li>
+                            <li>Armas/elementos: técnicas de viento y fuego.</li>
+                        </ul>
                     </div>
 
                     <div class="aldea-info v-niebla">
-                    <h3>Aldea de la Niebla</h3>
-                    <p>Aldea costera, conocida por su brutalidad en ciertos arcos y por ninjas con técnicas de agua.</p>
+                        <h3>Aldea de la Niebla</h3>
+                        <p>Aldea costera, conocida por su brutalidad en ciertos arcos y por ninjas con técnicas de agua.</p>
                     </div>
 
                     <div class="aldea-info v-arena">
-                    <h3>Aldea de la Arena</h3>
-                    <p>Ambiente desértico; famosos por usar arena como arma y por shinobis como Gaara.</p>
+                        <h3>Aldea de la Arena</h3>
+                        <p>Ambiente desértico; famosos por usar arena como arma y por shinobis como Gaara.</p>
                     </div>
 
                     <div class="aldea-info v-nubes">
-                    <h3>Aldea de las Nubes</h3>
-                    <p>Aldea tecnológica y militarizada con ninjas poderosos y gran fuerza física.</p>
+                        <h3>Aldea de las Nubes</h3>
+                        <p>Aldea tecnológica y militarizada con ninjas poderosos y gran fuerza física.</p>
                     </div>
 
                     <div class="aldea-info v-lluvia">
-                    <h3>Aldea de la Lluvia</h3>
-                    <p>Aldea pequeña, ambiente lluvioso, con técnicas melancólicas y personajes trágicos.</p>
+                        <h3>Aldea de la Lluvia</h3>
+                        <p>Aldea pequeña, ambiente lluvioso, con técnicas melancólicas y personajes trágicos.</p>
                     </div>
 
                     <div class="aldea-info v-roca">
-                    <h3>Aldea de la Roca</h3>
-                    <p>Famosa por ninjas que usan técnicas de tierra y gran resistencia física.</p>
+                        <h3>Aldea de la Roca</h3>
+                        <p>Famosa por ninjas que usan técnicas de tierra y gran resistencia física.</p>
                     </div>
 
                     <div class="aldea-info v-hierba">
-                    <h3>Aldea de la Hierba</h3>
-                    <p>Pequeña aldea con afinidad por técnicas de naturaleza y medicina.</p>
+                        <h3>Aldea de la Hierba</h3>
+                        <p>Pequeña aldea con afinidad por técnicas de naturaleza y medicina.</p>
                     </div>
 
                     <div class="aldea-info v-cascada">
-                    <h3>Aldea de la Cascada</h3>
-                    <p>Aldea ligada al agua y a la pesca; destaca por ninjas con sigilo acuático.</p>
+                        <h3>Aldea de la Cascada</h3>
+                        <p>Aldea ligada al agua y a la pesca; destaca por ninjas con sigilo acuático.</p>
                     </div>
 
                     <div class="aldea-info v-sonido">
-                    <h3>Aldea del Sonido</h3>
-                    <p>Conocida por experimentos con sonido y villanos memorables.</p>
+                        <h3>Aldea del Sonido</h3>
+                        <p>Conocida por experimentos con sonido y villanos memorables.</p>
                     </div>
 
                     <div class="aldea-info v-nieve">
-                    <h3>Aldea de la Nieve</h3>
-                    <p>Región fría con técnicas de hielo y climas extremos.</p>
+                        <h3>Aldea de la Nieve</h3>
+                        <p>Región fría con técnicas de hielo y climas extremos.</p>
                     </div>
 
                     <div class="aldea-info v-estrella">
-                    <h3>Aldea de la Estrella</h3>
-                    <p>Pequeña comunidad con vínculos a leyendas celestiales (ideal para lore fan-made).</p>
+                        <h3>Aldea de la Estrella</h3>
+                        <p>Pequeña comunidad con vínculos a leyendas celestiales.</p>
                     </div>
 
                     <div class="aldea-info v-remolino">
-                    <h3>Aldea del Remolino</h3>
-                    <p>Relacionado a clanes con técnicas giratorias y rápidos movimientos.</p>
+                        <h3>Aldea del Remolino</h3>
+                        <p>Relacionado a clanes con técnicas giratorias y rápidos movimientos.</p>
                     </div>
 
                     <div class="aldea-info v-luna">
-                    <h3>Aldea de la Luna</h3>
-                    <p>Aldea misteriosa, ambiente nocturno; perfecto para contenido visual y fanarts oscuros.</p>
+                        <h3>Aldea de la Luna</h3>
+                        <p>Aldea misteriosa, ambiente nocturno; perfecto para contenido visual y fanarts oscuros.</p>
                     </div>
 
                     <div class="aldea-info v-nadeshiko">
-                    <h3>Aldea Nadeshiko</h3>
-                    <p>Idea fan-made: conocida por su cultura y arte tradicionales.</p>
+                        <h3>Aldea Nadeshiko</h3>
+                        <p>Conocida por su cultura y arte tradicionales.</p>
                     </div>
 
                     <div class="aldea-info v-humo">
-                    <h3>Aldea del Humo</h3>
-                    <p>Región con niebla espesa y técnicas de enmascaramiento.</p>
+                        <h3>Aldea del Humo</h3>
+                        <p>Región con niebla espesa y técnicas de enmascaramiento.</p>
                     </div>
 
                     <div class="aldea-info v-sueño">
-                    <h3>Aldea del Sueño</h3>
-                    <p>Es una pequeña aldea situada en lo profundo de un bosque, a poca distancia del País del Fuego. Se sabe que por ella cruzaba un río. </p>
+                        <h3>Aldea del Sueño</h3>
+                        <p>Es una pequeña aldea situada en lo profundo de un bosque, a poca distancia del País del Fuego. Se sabe que por ella cruzaba un río. </p>
                     </div>
 
                 </aside>
             </div>
-        </section>
+        </section><br><br>
 
         <!-- sinopsis -->
         <section id="sinopsis" class="sinopsis">
             <h2>Sinopsis</h2>
-
             <div class="sinopsis-content">
+                <img src="img/sinop-naruto.png" alt="Naruto" class="img-sinop">
                 <p>
                     Naruto Narra la historia de Naruto Uzumaki, un huérfano que lleva sellado en su interior al Zorro Demonio de Nueve Colas. 
                     Rechazado por los aldeanos debido al poder de la bestia, Naruto sueña con convertirse en Hokage, el líder de su aldea, 
                     para obtener su reconocimiento. La historia sigue sus inicios como ninja junto a su equipo, el Equipo 7, con su rival Sasuke Uchiha 
                     y la chica, Sakura Haruno, bajo la tutela de Kakashi Hatake.
                 </p>
+                <img src="img/sinop-sasuke.png" alt="Sasuke" class="img-sinop">
             </div>
-        </section>
+        </section><br>
 
-        <footer class="footer">
-            <p>Síguenos en redes:</p>
+        <footer class="footer" id="redes">
+            <h4>Síguenos en nuestras redes sociales:</h4><br>
             <div class="redes">
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">TikTok</a>
-            </div>
-            <p>© 2025 Fan Page Naruto</p>
+                <a href="#redes"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="#redes"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+                <a href="#redes"><i class="fa-brands fa-tiktok fa-xl"></i></a>
+            </div><br>
+            <p>NarutoWiki © 2025</p>
         </footer>
     </body>
     <script src="script.js"></script>

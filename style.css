@@ -11,11 +11,15 @@ body {
     color: #000000;
 }
 
+h2{
+    font-size: 2.2rem;
+}
+
 /* HEADER */
 .header {
     padding: 25px 25px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -62,11 +66,10 @@ body {
 
 .hero-text {
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
     color: white;
     text-align: center;
-    max-width: 600px;
+    width: 100%;
 }
 
 .logo {
@@ -83,6 +86,11 @@ body {
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
 }
 
 .header:hover{
@@ -107,6 +115,20 @@ button {
     cursor: pointer;
 }
 
+.btn-audio{
+    background: rgb(255, 115, 0);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-audio:hover{
+    box-shadow: 0 0 10px rgba(255, 115, 0, 0.8);
+}
+
 .cards {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -119,16 +141,25 @@ button {
 
 .card {
     background-color: #1e2020;
-    padding: 15px;
+    padding: 15px; /*revvv*/
     border-radius: 12px;
     width: 220px;
     text-align: center;
     transition: transform 0.2s;
 }
 
-.card img {
+.card-img{
     width: 100%;
+    height: 280px;
+    overflow: hidden;
     border-radius: 10px;
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card h3{
@@ -138,30 +169,27 @@ button {
 
 .card:hover {
     transform: scale(1.1);
-    cursor: pointer;
-}
-
-.boton {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 10px 15px;
-    background-color: #b8e0ff;
-    color: #000000;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
 }
 
 .sinopsis {
-    padding: 60px 20px;
+    position: relative;
+    padding: 20px;
     background: #fafafa;
     text-align: center;
 }
 
+.sinopsis img{
+    height: 200px;
+}
+
+.sinopsis-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .sinopsis h2 {
-    font-size: 2.2rem;
     margin-bottom: 20px;
-    color: #ff7b00;  
     font-weight: 700;
 }
 
@@ -170,23 +198,31 @@ button {
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #333;
 }
 
 .footer {
-    background-color: #f6e27f;
+    background-color: rgba(255, 115, 0, 0.5);
+    backdrop-filter: blur(2px);
     padding: 20px;
     text-align: center;
     margin-top: 40px;
 }
 
+.redes{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
 
 /*DISEÑO ALDEAS*/
 .aldeas-section{
     padding: 28px 18px;
-    background: var(--bg);
-    color: var(--text);
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.aldeas-section h2{
+    text-align: center;
 }
 
 .aldeas-wrap{
@@ -211,6 +247,9 @@ button {
     gap: var(--gap);
     justify-items: center;
     align-items: center;
+    background-color: rgba(247, 247, 247, 0.7);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* card label */
@@ -234,22 +273,22 @@ button {
     width: 30%;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    border-radius: 8px;
     background: white;
     transition: transform .18s ease;
 }
 
 /* nombre debajo */
 .aldea-card span{
-    font-size: 0.82rem;
-    color: var(--muted);
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
 .aldea-card:hover,
 .aldea-card:focus{
     transform: translateY(-6px);
+    box-shadow: 0 10px 15px rgb(255, 160, 35);
 }
 .aldea-card:active{
     transform: translateY(-2px);
@@ -259,10 +298,14 @@ button {
 .info{
     display: flex;
     align-items: center;
+    align-self: center;
     padding: 18px;
-    border-radius: var(--radius);
+    border-radius: 10px;
     min-height: 120px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    height: fit-content;
+    color: black;
 }
 
 .info .aldea-info{
@@ -291,18 +334,15 @@ button {
 
 /* estilo dentro de cada info */
 .aldea-info h3{
-    margin: 0 0 8px 0;
-    font-size: 1.15rem;
-    color: var(--text);
+    font-size: 1.7rem;
+    
 }
 .aldea-info p{
-    margin: 0 0 8px 0;
-    color: #333;
+    padding-top: 10px;
     line-height: 1.4;
 }
 .aldea-info ul{
     margin: 6px 0 0 18px;
-    color: var(--muted);
 }
 
 /* animación pequeña */
@@ -311,11 +351,62 @@ button {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-@media(min-width: 880px){
-    .header {
-        flex-direction: row;
+/* accesibilidad: foco en labels */
+.aldea-card:focus-within,
+.aldea-card:focus{
+    outline: 3px solid rgba(255,184,107,0.18);
+    border-radius: 10px;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 760px){
+    
+    .header{
+        padding: 20px 20px;
     }
 
+    .header.scrolled{
+        padding: 10px 18px;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+
+    .hero-text{
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .img-sinop {
+        display: none;
+    }
+
+    .nav {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: rgba(97, 21, 97, 0.7);
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        gap: 25px;
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/*LAPTOP*/
+@media(min-width: 1201px){
+    
     .aldeas-wrap{
         flex-direction: row;
     }
@@ -339,11 +430,4 @@ button {
         width: 92px;
         height: 92px;
     }
-}
-
-/* accesibilidad: foco en labels */
-.aldea-card:focus-within,
-.aldea-card:focus{
-    outline: 3px solid rgba(255,184,107,0.18);
-    border-radius: 10px;
 }
